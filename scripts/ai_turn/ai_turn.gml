@@ -9,7 +9,16 @@ function ai_turn() {
         // Change the state of the chosen panel to 2 (AI's move)
         with (chosen_panel) {
             state = 2;
+			state_lists();
+			array_push(global.state2_panels, chosen_panel.number);
         }
 		global.turn = 1; //player's turn
     }
+		var winner = check_win();
+		
+		if(winner == 1) {
+			room = rm_game_over_w;
+		} else if(winner == 2){
+			room = rm_game_over_l;
+		}
 }

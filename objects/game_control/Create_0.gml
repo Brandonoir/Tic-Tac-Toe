@@ -7,5 +7,7 @@ global.available_panels = ds_list_create();
 global.state_1 = ds_list_create();
 global.state_2 = ds_list_create();
 
-state_lists();
+global.state1_panels = [];
+global.state2_panels = [];
 
+//state_lists();
